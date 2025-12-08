@@ -1,6 +1,6 @@
 # Vehicle Rental Management System
 
-**Live Deployment:** [https://pa-1-assaingment-2-main.vercel.app/](https://vehicles-sh2d0wa51-devanwarul-3537s-projects.vercel.app/)
+**Live Deployment:** [https://vehicles-brown.vercel.app/](https://vehicles-sh2d0wa51-devanwarul-3537s-projects.vercel.app/)
 [![Live Deployment](https://img.shields.io/badge/Live-Deployment-blue)](https://vehicles-sh2d0wa51-devanwarul-3537s-projects.vercel.app/)
 
 ---
@@ -87,43 +87,43 @@ The server will start at http://localhost:5000.
 Auth
 
 ```
-Signup: POST /api/v1/auth/signup
+Signup: POST /api/v1/auth/signup (Register new user account)
 
-Signin: POST /api/v1/auth/signin
+Signin: POST /api/v1/auth/signin (Login and receive JWT token)
 ```
 
 Users
 
 ```
-Get All Users: GET /api/v1/users (Admin & Customer)
+Get All Users: GET /api/v1/users (Admin View all users in the system)
 
-Update User: PUT /api/v1/users/:id (Admin & Customer)
+Update User: PUT /api/v1/users/:id (Admin Update any user's role or details & Customer Update own profile only)
 
-Delete User: DELETE /api/v1/users/:id (Admin)
+Delete User: DELETE /api/v1/users/:id (Admin Delete user (only if no active bookings exist))
 ```
 
 Vehicles
 
 ```
-Create Vehicle: POST /api/v1/vehicles (Admin)
+Create Vehicle: POST /api/v1/vehicles (Admin Add new vehicle with name, type, registration, daily rent price and availability status)
 
-Get All Vehicles: GET /api/v1/vehicles (Admin & Customer)
+Get All Vehicles: GET /api/v1/vehicles (Public View all vehicles in the system)
 
-Get Single Vehicle: GET /api/v1/vehicles/:id (Admin & Customer)
+Get Single Vehicle: GET /api/v1/vehicles/:id (Public View specific vehicle details)
 
-Update Vehicle: PUT /api/v1/vehicles/:id (Admin)
+Update Vehicle: PUT /api/v1/vehicles/:id ( Admin  Update vehicle details, daily rent price or availability status)
 
-Delete Vehicle: DELETE /api/v1/vehicles/:id (Admin)
+Delete Vehicle: DELETE /api/v1/vehicles/:id (Admin Delete vehicle (only if no active bookings exist))
 ```
 
 Bookings
 
 ```
-Create Booking: POST /api/v1/bookings (Admin & Customer)
+Create Booking: POST /api/v1/bookings ( Customer or Admin ,Admin & Customer Create booking with start/end dates *• Validates vehicle availability *• Calculates total price (daily rate × duration) *• Updates vehicle status to "booked")
 
-Get All Bookings: GET /api/v1/bookings (Admin & Customer)
+Get All Bookings: GET /api/v1/bookings (Role-based, Admin: View all bookings, Customer: View own bookings only)
 
-Update Booking: PUT /api/v1/bookings/:id (Admin & Customer)
+Update Booking: PUT /api/v1/bookings/:id ( Role-based, Customer: Cancel booking (before start date only) Admin: Mark as "returned" (updates vehicle to "available") System: Auto-mark as "returned" when period ends)
 
 Auto Return Bookings: PUT /api/v1/bookings/auto-return (Admin)
 ```

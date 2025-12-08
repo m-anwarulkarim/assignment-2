@@ -5,7 +5,7 @@ import { role } from "../../utils/role.js";
 
 const router = Router();
 
-router.get("/", auth(role.admin, role.customer), userController.getAllUser);
+router.get("/", auth(role.admin), userController.getAllUser);
 router.put("/:id", auth(role.admin, role.customer), userController.updateUser);
 router.delete("/:id", auth(role.admin), userController.deleteUser);
 
