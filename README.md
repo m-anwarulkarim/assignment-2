@@ -1,7 +1,7 @@
 # Vehicle Rental Management System
 
-**Live Deployment:** [https://vehicles-brown.vercel.app/](https://vehicles-sh2d0wa51-devanwarul-3537s-projects.vercel.app/)
-[![Live Deployment](https://img.shields.io/badge/Live-Deployment-blue)](https://vehicles-sh2d0wa51-devanwarul-3537s-projects.vercel.app/)
+**Live Deployment:** https://pa-1-assaingment-2-main.vercel.app/
+
 
 ---
 
