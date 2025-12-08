@@ -62,7 +62,7 @@ cd P-A-2
 ### 2. Install dependencies
 
 ```bash
-Copy code
+
 npm install
 ```
 
