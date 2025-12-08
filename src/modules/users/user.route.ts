@@ -3,6 +3,7 @@ import { userController } from "./user.controller.js";
 import auth from "../../middleware/auth.js";
 import { role } from "../../utils/role.js";
 
+
 const router = Router();
 
 router.get("/", auth(role.admin), userController.getAllUser);
